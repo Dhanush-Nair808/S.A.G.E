@@ -70,15 +70,19 @@ S.A.G.E/
 # 🚀 Quick Start
 1. Clone the Repository
 Bashgit clone <your-repo-url>
+
 cd S.A.G.E
+
 2. Setup Environment
 Bashpython -m venv venv
 venv\Scripts\activate        # Windows
 pip install -r requirements.txt
+
 3. Environment Variables
 Create a .env file in the root:
 envMISTRAL_API_KEY=your_mistral_api_key_here
 MISTRAL_MODEL=mistral-small-latest
+
 4. Prepare ML Models (Important)
 Since model files are too large for GitHub:
 
@@ -87,22 +91,27 @@ Run all cells from top to bottom
 This will train the models and save them to backend/ml/models/
 
 Alternatively, you can run the final export cells manually.
+
 5. Setup RAG (Company Policy Knowledge)
-Bash# Place your policy PDFs in the docs/ folder
-## Then run:
-python backend/rag/ingest.py
+Place your policy PDFs in the docs/ folder
+
+Then run:
+```python backend/rag/ingest.py```
 6. Initialize Database
-Bashpython -c "from backend.database.init_db import *; print('DB initialized')"
+```python -c "from backend.database.init_db import *; print('DB initialized')"```
 
 # ▶️ Running the Application
+
 Recommended (One-click)
-PowerShell./run_app.ps1
+```PowerShell./run_app.ps1```
 This starts both backend and frontend and opens the browser.
+
 Manual Start
-Bash# Terminal 1 - Backend
+
+Terminal 1 - Backend
 uvicorn backend.main:app --reload --port 8000
 
-## Terminal 2 - Frontend
+Terminal 2 - Frontend
 streamlit run frontend/app.py
 
 # 🔄 Updating the System
