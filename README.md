@@ -67,7 +67,7 @@ S.A.G.E/
 └── .env
 ```
 
-🚀 Quick Start
+# 🚀 Quick Start
 1. Clone the Repository
 Bashgit clone <your-repo-url>
 cd S.A.G.E
@@ -89,12 +89,12 @@ This will train the models and save them to backend/ml/models/
 Alternatively, you can run the final export cells manually.
 5. Setup RAG (Company Policy Knowledge)
 Bash# Place your policy PDFs in the docs/ folder
-# Then run:
+## Then run:
 python backend/rag/ingest.py
 6. Initialize Database
 Bashpython -c "from backend.database.init_db import *; print('DB initialized')"
 
-▶️ Running the Application
+# ▶️ Running the Application
 Recommended (One-click)
 PowerShell./run_app.ps1
 This starts both backend and frontend and opens the browser.
@@ -102,17 +102,17 @@ Manual Start
 Bash# Terminal 1 - Backend
 uvicorn backend.main:app --reload --port 8000
 
-# Terminal 2 - Frontend
+## Terminal 2 - Frontend
 streamlit run frontend/app.py
 
-🔄 Updating the System
+# 🔄 Updating the System
 
 Add new policies: Put PDFs in docs/ → re-run ingest.py
 Improve classification: Submit feedback in the app → model retrains automatically
 Retrain manually: Use the notebook or call retraining endpoint
 
 
-📊 Key Directories (Add to .gitignore)
+# 📊 Key Directories (Add to .gitignore)
 gitignorevenv/
 .env
 __pycache__/
@@ -120,13 +120,13 @@ backend/ml/models/
 backend/chroma_db/
 *.db
 
-🤝 Contributing
+# 🤝 Contributing
 Contributions are welcome! You can help with:
 
 Adding more ML models
 Improving RAG retrieval quality
 Enhancing the UI/UX
-Adding new features (notifications, multi-language, etc.)
+Adding new features (email support,notifications, multi-language, etc.)
 
 
 S.A.G.E — Making customer support Smarter, Accurate, Grounded, and Efficient.
