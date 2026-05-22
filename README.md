@@ -65,6 +65,7 @@ S.A.G.E/
 ├── requirements.txt
 ├── run_app.ps1
 └── .env
+```
 
 🚀 Quick Start
 1. Clone the Repository
