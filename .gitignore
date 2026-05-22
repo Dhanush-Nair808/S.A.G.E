@@ -1,0 +1,50 @@
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor settings
+.vscode/
+
+# Machine learning model artifacts
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+*.safetensors
+
+# Local databases and vector stores
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+**/chroma_db/
+*.bin
+
+# OS files
+.DS_Store
+Thumbs.db

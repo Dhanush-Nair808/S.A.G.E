@@ -1,0 +1,34 @@
+from pathlib import Path
+
+folders = [
+    "backend/api",
+    "backend/auth",
+    "backend/database",
+    "backend/ml",
+    "backend/rag",
+    "backend/agents",
+    "backend/services",
+    "backend/uploads",
+    "backend/chroma_db",
+    "frontend/pages",
+    "frontend/components",
+    "frontend/assets",
+    "data",
+    "docs"
+]
+
+files = [
+    "backend/main.py",
+    "backend/requirements.txt",
+    "frontend/app.py",
+    "README.md",
+    ".env"
+]
+
+for folder in folders:
+    Path(folder).mkdir(parents=True, exist_ok=True)
+
+for file in files:
+    Path(file).touch(exist_ok=True)
+
+print("S.A.G.E. project structure created successfully.")
